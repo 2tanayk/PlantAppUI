@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/details/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -18,19 +19,49 @@ class RecommendedPlants extends StatelessWidget {
               title: "Samantha",
               country: "Russia",
               price: 440,
-              press: () {}),
+              press: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(
+                          name: "Samantha",
+                          country: "Russia",
+                          price: 440,
+                          image: "image_1.png"),
+                    ));
+              }),
           RecommendPlantCard(
               image: "assets/images/image_2.png",
               title: "Angelica",
               country: "Russia",
               price: 500,
-              press: () {}),
+              press: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(
+                          name: "Angelica",
+                          country: "Russia",
+                          price: 500,
+                          image: "image_2.png"),
+                    ));
+              }),
           RecommendPlantCard(
               image: "assets/images/image_3.png",
-              title: "Samantha",
+              title: "Viola",
               country: "Russia",
-              price: 440,
-              press: () {}),
+              price: 470,
+              press: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailsScreen(
+                          name: "Viola",
+                          country: "Russia",
+                          price: 470,
+                          image: "image_3.png"),
+                    ));
+              }),
         ],
       ),
     );
